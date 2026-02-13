@@ -40,7 +40,7 @@
       <a href="#" class="hover:text-red-500 transition">Privacy Policy</a>
       <a href="#" class="hover:text-red-500 transition">Contact Us</a>
 
-      <button class="py-2 px-5 rounded-md text-white font-semibold bg-gradient-to-r from-[#ff8938] to-red-500">
+      <button class="py-2 px-5 rounded-md text-white font-semibold bg-gradient-to-r from-[#ff8938] to-red-500 cursor-pointer">
         Get Started
       </button>
     </div>
@@ -272,29 +272,13 @@ class="container mx-auto sm:grid grid-cols-1 lg:grid grid-cols-2 sm:gap-[100px] 
         
     </div>
 
-    
-    <p class="ml-[400px]">&copy;All reserved by Jobaidul Islam Saju</p>
-    
+    <div class="flex justify-center">
+    <p>&copy;All reserved by Jobaidul Islam Saju</p>
+    </div>
 
 </section>
 </footer>
 
-<script>
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mobile-menu");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-
-    // Toggle icon
-    if (btn.innerHTML === "✖") {
-      btn.innerHTML = "☰";
-    } else {
-      btn.innerHTML = "✖";
-    }
-  });
-</script>
-
-
+ <script src="tea.js"></script>
 </body>
 </html>

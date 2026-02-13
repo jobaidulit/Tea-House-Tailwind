@@ -20,6 +20,51 @@
      
 </head>
 <body>
+   
+<!-- Navbar -->
+<div class="bg-[#ffeee0]">
+  <div class="container mx-auto flex justify-between items-center px-4 h-[70px]">
+
+    <!-- Logo -->
+    <h2 class="font-extrabold text-[25px]">
+      <span class="bg-gradient-to-r from-[#ff8938] to-red-500 bg-clip-text text-transparent">
+        TEA HOUSE
+      </span>
+    </h2>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-[30px] items-center font-semibold">
+      <a href="#" class="hover:text-red-500 transition">Home</a>
+      <a href="#" class="hover:text-red-500 transition">About Us</a>
+      <a href="#" class="hover:text-red-500 transition">Insurance</a>
+      <a href="#" class="hover:text-red-500 transition">Privacy Policy</a>
+      <a href="#" class="hover:text-red-500 transition">Contact Us</a>
+
+      <button class="py-2 px-5 rounded-md text-white font-semibold bg-gradient-to-r from-[#ff8938] to-red-500">
+        Get Started
+      </button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-3xl font-bold">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col gap-4 px-4 pb-4 font-semibold bg-[#ffeee0]">
+    <a href="#" class="hover:text-red-500 transition">Home</a>
+    <a href="#" class="hover:text-red-500 transition">About Us</a>
+    <a href="#" class="hover:text-red-500 transition">Insurance</a>
+    <a href="#" class="hover:text-red-500 transition">Privacy Policy</a>
+    <a href="#" class="hover:text-red-500 transition">Contact Us</a>
+
+    <button class="py-2 px-5 rounded-md text-white font-semibold bg-gradient-to-r from-[#ff8938] to-red-500">
+      Get Started
+    </button>
+  </div>
+</div>
+
     <section class="container mx-auto grid-cols-1 md:grid grid-cols-2">
         <div class="banner-left space-y-[30px]">
 <h1 class="text-[80px] font-bold">It's good <br>
@@ -233,5 +278,23 @@ class="container mx-auto sm:grid grid-cols-1 lg:grid grid-cols-2 sm:gap-[100px] 
 
 </section>
 </footer>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+
+    // Toggle icon
+    if (btn.innerHTML === "✖") {
+      btn.innerHTML = "☰";
+    } else {
+      btn.innerHTML = "✖";
+    }
+  });
+</script>
+
+
 </body>
 </html>
